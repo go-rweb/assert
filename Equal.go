@@ -10,8 +10,8 @@ func Equal[T comparable](t testing.TB, a T, b T) {
 	if a == b {
 		return
 	}
-	
-	t.Errorf(`Equal:
+
+	t.Errorf(`
 file:     %s
 assert:   Equal
 value:    %v
@@ -25,7 +25,7 @@ func NotEqual[T comparable](t testing.TB, a T, b T) {
 		return
 	}
 
-	t.Errorf(`NotEqual:
+	t.Errorf(`
 file:     %s
 assert:   NotEqual
 value:    %v`, file(t), a)
@@ -37,7 +37,7 @@ func DeepEqual[T comparable](t testing.TB, a T, b T) {
 	if reflect.DeepEqual(a, b) {
 		return
 	}
-	
+
 	t.Errorf(`
 file:     %s
 assert:   DeepEqual
