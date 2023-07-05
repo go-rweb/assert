@@ -1,0 +1,50 @@
+package assert
+
+import (
+	"reflect"
+	"testing"
+)
+
+// Nil asserts that the given parameter equals nil.
+func Nil(t testing.TB, a any) {
+	if isNil(a) {
+		return
+	}
+
+	t.Errorf(`
+file:     %s
+assert:   Nil
+value:    %v
+expected: nil`, file(t), a)
+	t.FailNow()
+}
+
+// NotNil asserts that the given parameter does not equal nil.
+func NotNil(t testing.TB, a any) {
+	if !isNil(a) {
+		return
+	}
+
+	t.Errorf(`
+file:     %s
+assert:   NotNil
+value:    %v
+expected: not nil`, file(t), a)
+	t.FailNow()
+}
+
+// isNil returns true if the object is nil.
+func isNil(object any) bool {
+	if object == nil {
+		return true
+	}
+
+	value := reflect.ValueOf(object)
+
+	switch value.Kind() {
+	case reflect.Chan, reflect.Func, reflect.Map, reflect.Ptr, reflect.UnsafePointer, reflect.Interface, reflect.Slice:
+		return value.IsNil()
+	}
+
+	return false
+}
