@@ -11,11 +11,7 @@ func Equal[T comparable](t testing.TB, a T, b T) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   Equal
-value:    %v
-expected: %v`, file(t), a, b)
+	t.Errorf(formatTwoParameters, file(), "Equal", a, b)
 	t.FailNow()
 }
 
@@ -25,10 +21,7 @@ func NotEqual[T comparable](t testing.TB, a T, b T) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   NotEqual
-value:    %v`, file(t), a)
+	t.Errorf(formatTwoParameters, file(), "NotEqual", a, b)
 	t.FailNow()
 }
 
@@ -38,10 +31,6 @@ func DeepEqual[T comparable](t testing.TB, a T, b T) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   DeepEqual
-value:    %v
-expected: %v`, file(t), a, b)
+	t.Errorf(formatTwoParameters, file(), "DeepEqual", a, b)
 	t.FailNow()
 }

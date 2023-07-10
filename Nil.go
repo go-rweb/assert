@@ -11,11 +11,7 @@ func Nil(t testing.TB, a any) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   Nil
-value:    %v
-expected: nil`, file(t), a)
+	t.Errorf(formatOneParameter, file(), "Nil", a)
 	t.FailNow()
 }
 
@@ -25,11 +21,7 @@ func NotNil(t testing.TB, a any) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   NotNil
-value:    %v
-expected: not nil`, file(t), a)
+	t.Errorf(formatOneParameter, file(), "NotNil", a)
 	t.FailNow()
 }
 

@@ -19,11 +19,12 @@ func TestContains(t *testing.T) {
 }
 
 func TestNotContains(t *testing.T) {
-	assert.NotContains(t, "Hello", "404")
-	assert.NotContains(t, []string{"Hello", "World"}, "404")
+	assert.NotContains(t, "Hello", "h")
+	assert.NotContains(t, "Hello", "hello")
+	assert.NotContains(t, []string{"Hello", "World"}, "hello")
 	assert.NotContains(t, []int{1, 2, 3}, 4)
 	assert.NotContains(t, []int{1, 2, 3}, []int{2, 1})
 	assert.NotContains(t, []byte{'H', 'e', 'l', 'l', 'o'}, byte('a'))
 	assert.NotContains(t, []byte{'H', 'e', 'l', 'l', 'o'}, []byte{'l', 'e'})
-	assert.NotContains(t, map[string]int{"Hello": 1, "World": 2}, "404")
+	assert.NotContains(t, map[string]int{"Hello": 1, "World": 2}, "hello")
 }

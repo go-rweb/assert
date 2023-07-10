@@ -12,11 +12,7 @@ func Contains(t testing.TB, a any, b any) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   Contains
-container:%v
-element:  %v`, file(t), a, b)
+	t.Errorf(formatTwoParameters, file(), "Contains", a, b)
 	t.FailNow()
 }
 
@@ -26,11 +22,7 @@ func NotContains(t testing.TB, a any, b any) {
 		return
 	}
 
-	t.Errorf(`
-file:     %s
-assert:   NotContains
-container:%v
-element:  %v`, file(t), a, b)
+	t.Errorf(formatTwoParameters, file(), "NotContains", a, b)
 	t.FailNow()
 }
 
