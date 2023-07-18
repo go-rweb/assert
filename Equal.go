@@ -26,7 +26,7 @@ func NotEqual[T comparable](t testing.TB, a T, b T) {
 }
 
 // DeepEqual asserts that the two parameters are deeply equal.
-func DeepEqual[T comparable](t testing.TB, a T, b T) {
+func DeepEqual[T any](t testing.TB, a T, b T) {
 	if reflect.DeepEqual(a, b) {
 		return
 	}

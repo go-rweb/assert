@@ -24,6 +24,7 @@ func TestNotEqual(t *testing.T) {
 func TestDeepEqual(t *testing.T) {
 	assert.DeepEqual(t, 0, 0)
 	assert.DeepEqual(t, "Hello", "Hello")
+	assert.DeepEqual(t, []byte("Hello"), []byte("Hello"))
 	assert.DeepEqual(t, T{A: 10}, T{A: 10})
 	assert.DeepEqual(t, &T{A: 10}, &T{A: 10})
 }
