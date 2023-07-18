@@ -2,6 +2,12 @@
 
 A minimal & stateless assert package for writing tests.
 
+## Installation
+
+```shell
+go get git.akyoto.dev/go/assert
+```
+
 ## API
 
 ```go
