@@ -28,3 +28,15 @@ func TestDeepEqual(t *testing.T) {
 	assert.DeepEqual(t, T{A: 10}, T{A: 10})
 	assert.DeepEqual(t, &T{A: 10}, &T{A: 10})
 }
+
+func TestFailEqual(t *testing.T) {
+	assert.Equal(fail(t), 0, 1)
+}
+
+func TestFailNotEqual(t *testing.T) {
+	assert.NotEqual(fail(t), 0, 0)
+}
+
+func TestFailDeepEqual(t *testing.T) {
+	assert.DeepEqual(fail(t), "Hello", "World")
+}

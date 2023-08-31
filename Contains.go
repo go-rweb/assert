@@ -3,26 +3,25 @@ package assert
 import (
 	"reflect"
 	"strings"
-	"testing"
 )
 
 // Contains asserts that a contains b.
-func Contains(t testing.TB, a any, b any) {
+func Contains(t test, a any, b any) {
 	if contains(a, b) {
 		return
 	}
 
-	t.Errorf(formatTwoParameters, file(), "Contains", a, b)
+	t.Errorf(twoParameters, file(), "Contains", a, b)
 	t.FailNow()
 }
 
 // NotContains asserts that a doesn't contain b.
-func NotContains(t testing.TB, a any, b any) {
+func NotContains(t test, a any, b any) {
 	if !contains(a, b) {
 		return
 	}
 
-	t.Errorf(formatTwoParameters, file(), "NotContains", a, b)
+	t.Errorf(twoParameters, file(), "NotContains", a, b)
 	t.FailNow()
 }
 

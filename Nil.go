@@ -2,26 +2,25 @@ package assert
 
 import (
 	"reflect"
-	"testing"
 )
 
 // Nil asserts that the given parameter equals nil.
-func Nil(t testing.TB, a any) {
+func Nil(t test, a any) {
 	if isNil(a) {
 		return
 	}
 
-	t.Errorf(formatOneParameter, file(), "Nil", a)
+	t.Errorf(oneParameter, file(), "Nil", a)
 	t.FailNow()
 }
 
 // NotNil asserts that the given parameter does not equal nil.
-func NotNil(t testing.TB, a any) {
+func NotNil(t test, a any) {
 	if !isNil(a) {
 		return
 	}
 
-	t.Errorf(formatOneParameter, file(), "NotNil", a)
+	t.Errorf(oneParameter, file(), "NotNil", a)
 	t.FailNow()
 }
 

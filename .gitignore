@@ -1,16 +1,7 @@
-# Ignore everything
 *
-
-# But not these files...
-!/.gitignore
-!/.editorconfig
-
-!*.go
-!go.sum
-!go.mod
-
-!README.md
-!LICENSE
-
-# ...even if they are in subdirectories
 !*/
+!.gitignore
+!*.go
+!*.md
+!*.mod
+!*.sum

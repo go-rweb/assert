@@ -35,3 +35,11 @@ func TestNotNil(t *testing.T) {
 	assert.NotNil(t, make(chan byte))
 	assert.NotNil(t, TestNotNil)
 }
+
+func TestFailNil(t *testing.T) {
+	assert.Nil(fail(t), 0)
+}
+
+func TestFailNotNil(t *testing.T) {
+	assert.NotNil(fail(t), nil)
+}

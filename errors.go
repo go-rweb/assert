@@ -5,10 +5,22 @@ import (
 	"strings"
 )
 
+const oneParameter = `
+  %s
+󰅙  assert.%s
+    󰯬  %v`
+
+const twoParameters = `
+  %s
+󰅙  assert.%s
+    󰯬  %v
+    󰯯  %v`
+
 // file returns the first line containing "_test.go" in the debug stack.
 func file() string {
 	stack := string(debug.Stack())
 	lines := strings.Split(stack, "\n")
+	name := ""
 
 	for _, line := range lines {
 		if strings.Contains(line, "_test.go") {
@@ -18,9 +30,10 @@ func file() string {
 				line = line[:space]
 			}
 
-			return strings.TrimSpace(line)
+			name = strings.TrimSpace(line)
+			break
 		}
 	}
 
-	return ""
+	return name
 }
