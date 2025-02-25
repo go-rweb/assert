@@ -1,3 +1,3 @@
-module git.akyoto.dev/go/assert
+module git.urbach.dev/go/assert
 
-go 1.21
+go 1.24

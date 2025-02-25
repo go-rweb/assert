@@ -11,7 +11,7 @@ A minimal & stateless assert package for writing tests.
 ## Installation
 
 ```shell
-go get git.akyoto.dev/go/assert
+go get git.urbach.dev/go/assert
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ coverage: 100.0% of statements
 
 ## License
 
-Please see the [license documentation](https://akyoto.dev/license).
+Please see the [license documentation](https://urbach.dev/license).
 
 ## Copyright
 
