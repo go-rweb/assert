@@ -1,7 +1,6 @@
-*
-!*/
-!.gitignore
-!*.go
-!*.md
-!*.mod
-!*.sum
+.idea/
+.zed
+.vscode/
+.DS_Store
+.qodo
+

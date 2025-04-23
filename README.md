@@ -2,6 +2,9 @@
 
 A minimal & stateless assert package for writing tests.
 
+Forked from git.akyoto.dev/go/assert
+because `go mod tidy` failures here
+
 ## Features
 
 - Simple interface
@@ -11,7 +14,7 @@ A minimal & stateless assert package for writing tests.
 ## Installation
 
 ```shell
-go get git.urbach.dev/go/assert
+go get github.com/rohanthewiz/assert
 ```
 
 ## Usage
@@ -23,32 +26,3 @@ assert.Equal(t, "Hello", "Hello")
 assert.DeepEqual(t, "Hello", "Hello")
 assert.Contains(t, "Hello", "ello")
 ```
-
-## Tests
-
-```
-PASS: TestContains
-PASS: TestNotContains
-PASS: TestFailContains
-PASS: TestFailNotContains
-PASS: TestEqual
-PASS: TestNotEqual
-PASS: TestDeepEqual
-PASS: TestFailEqual
-PASS: TestFailNotEqual
-PASS: TestFailDeepEqual
-PASS: TestNil
-PASS: TestNotNil
-PASS: TestFailNil
-PASS: TestFailNotNil
-PASS: TestTrue
-coverage: 100.0% of statements
-```
-
-## License
-
-Please see the [license documentation](https://urbach.dev/license).
-
-## Copyright
-
-© 2019 Eduard Urbach

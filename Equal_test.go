@@ -3,7 +3,7 @@ package assert_test
 import (
 	"testing"
 
-	"git.urbach.dev/go/assert"
+	"github.com/rohanthewiz/assert"
 )
 
 type T struct{ A int }

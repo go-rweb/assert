@@ -1,3 +1,3 @@
-module git.urbach.dev/go/assert
+module github.com/rohanthewiz/assert
 
-go 1.24
+go 1.21

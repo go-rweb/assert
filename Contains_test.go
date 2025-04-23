@@ -3,7 +3,7 @@ package assert_test
 import (
 	"testing"
 
-	"git.urbach.dev/go/assert"
+	"github.com/rohanthewiz/assert"
 )
 
 func TestContains(t *testing.T) {
