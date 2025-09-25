@@ -14,7 +14,7 @@ because `go mod tidy` failures here
 ## Installation
 
 ```shell
-go get github.com/rohanthewiz/assert
+go get github.com/go-rweb/assert
 ```
 
 ## Usage

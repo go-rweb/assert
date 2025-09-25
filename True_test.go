@@ -3,7 +3,7 @@ package assert_test
 import (
 	"testing"
 
-	"github.com/rohanthewiz/assert"
+	"github.com/go-rweb/assert"
 )
 
 func TestTrue(t *testing.T) {
